@@ -1,7 +1,11 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 import Button from '../components/Button';
-import { Link } from 'expo-router';
+import { Link, Redirect } from 'expo-router';
+
+export default function TabIndex() {
+  return <Redirect href={'/(auth)/'}/>
+}
 
 const index = () => {
   return (
@@ -16,4 +20,4 @@ const index = () => {
   );
 };
 
-export default index;
+//export default index;
