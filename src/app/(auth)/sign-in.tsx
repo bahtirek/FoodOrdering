@@ -45,7 +45,7 @@ const SigninScreen = () => {
   }
 
   const goToSignup = () => {
-    router.push('./signup')
+    router.push('./sign-up')
   }
 
   const handlePasswordInputChange = (password: string) => {
