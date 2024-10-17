@@ -10,23 +10,21 @@ type ProductListItemProps = {
   product: Product
 }
 
-
-
 const OrderItemDetails = ({ product }: any) => {
 
   const segments = useSegments();
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: defaultPizzaImage }}
+        source={{ uri: product.products.image || defaultPizzaImage }}
         style={styles.image}
         resizeMode="contain"
       />
       <View style={styles.content}>
         <View>
-          <Text style={styles.title}>product name</Text>
+          <Text style={styles.title}>{product.products.name}</Text>
           <View style={{display: 'flex', flexDirection: 'row'}}>
-            <Text style={styles.price}>$99.99</Text>
+            <Text style={styles.price}>${product.products.price}</Text>
             <Text>Size: 
               <Text style={styles.size}>{product.size}</Text>
             </Text>
@@ -67,6 +65,7 @@ const styles = StyleSheet.create({
   image: {
     width: '20%',
     aspectRatio: 1,
+    marginRight: 10
   },
   content: {
     flex: 1,

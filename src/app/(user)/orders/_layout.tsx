@@ -5,11 +5,7 @@ import { Pressable } from "react-native";
 
 export default function MenuStack() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false
-      }}
-    >
+    <Stack>
       <Stack.Screen 
         name="index"
         options={{title: "Orders"}}

@@ -1,9 +1,6 @@
-import { Stack, useLocalSearchParams, useRouter } from "expo-router"
-import { View, Text, Image, StyleSheet, Pressable, FlatList } from "react-native";
+import { Stack, useLocalSearchParams, } from "expo-router"
+import { View, Text, Image, StyleSheet, FlatList } from "react-native";
 import orders from "@assets/data/orders";
-import { useState } from "react";
-import Button from "@components/Button";
-import { useCart } from "@/providers/CartProvider";
 import { PizzaSize } from "@/types";
 import OrderListItem from "@/components/OrderListItem";
 import OrderDetails from "@/components/OrderItemDetails";
@@ -13,11 +10,8 @@ const sizes: PizzaSize[] = ['S', 'M', 'L', 'XL'];
 
 const OrderDetailsScreen = () => {
   const {id} = useLocalSearchParams();
-  const router = useRouter();
 
-  const [selectedSize, setSelectedSize] = useState<PizzaSize>('M');
-
-  const order = orders.find((p) => p.id.toString() == id);
+  const order = orders.find((o) => o.id.toString() == id);
 
   if (!order) {
     return <Text>Order not found</Text>
