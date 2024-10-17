@@ -3,7 +3,6 @@ import { View, Text, Image, StyleSheet, FlatList } from "react-native";
 import orders from "@assets/data/orders";
 import { PizzaSize } from "@/types";
 import OrderListItem from "@/components/OrderListItem";
-import OrderDetails from "@/components/OrderItemDetails";
 import OrderItemDetails from "@/components/OrderItemDetails";
 
 const sizes: PizzaSize[] = ['S', 'M', 'L', 'XL'];
